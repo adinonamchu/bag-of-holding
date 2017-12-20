@@ -1,5 +1,5 @@
 #!/bin/bash
-chmod +x sourceclear
+chmod +x script/sourceclear
 
 set -e
 
