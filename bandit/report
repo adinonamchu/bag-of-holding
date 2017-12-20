@@ -1,0 +1,2211 @@
+echo 'Running Bandit tests'
+
+Running Bandit tests
+
+bandit -r -f json -o banditResult.json .
+
+[main]	INFO	profile include tests: None
+
+[main]	INFO	profile exclude tests: None
+
+[main]	INFO	cli include tests: None
+
+[main]	INFO	cli exclude tests: None
+
+[json]	INFO	JSON output written to file: banditResult.json
+
+
+echo 'Results:'
+
+Results:
+
+python bandit/banditParser.py -o banditResult.json -i bandit.ignore
+
+--------------------------------------------------
+
+Issue Fingerprint: 1bf5b3cc9718ed665526566b9878c919ef02edd42dd17d88d88fc489346789d8
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+30     if value == Application.VERY_HIGH_CRITICALITY:
+
+31         return mark_safe(stars(5, 5, 'Very High'))
+
+32     if value == Application.HIGH_CRITICALITY:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 976c4161208b346bfbbf91d17809bfc70d5364b8552fb3e566a9de7c33c2eb5a
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+32     if value == Application.HIGH_CRITICALITY:
+
+33         return mark_safe(stars(4, 5, 'High'))
+
+34     if value == Application.MEDIUM_CRITICALITY:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 8827a0315a32afaedf959f742c711cc56311e1f9cfbf0198ebb43fb18ab4d629
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+34     if value == Application.MEDIUM_CRITICALITY:
+
+35         return mark_safe(stars(3, 5, 'Medium'))
+
+36     if value == Application.LOW_CRITICALITY:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 358a0eb86abb050dd84949a5ef9042b4ffaf705c11a45eda11146f138c590508
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+36     if value == Application.LOW_CRITICALITY:
+
+37         return mark_safe(stars(2, 5, 'Low'))
+
+38     if value == Application.VERY_LOW_CRITICALITY:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 5c1333d2643d8220036ae7efefdf67f408fadee98fdeed67e8808bbe0110c37d
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+38     if value == Application.VERY_LOW_CRITICALITY:
+
+39         return mark_safe(stars(1, 5, 'Very Low'))
+
+40     if value == Application.NONE_CRITICALITY:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: d7d0f83cf569b23e91a06786ef14501a455aba036642f6d17d5c9e1f29abb8d6
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+40     if value == Application.NONE_CRITICALITY:
+
+41         return mark_safe(stars(0, 5, 'None'))
+
+42     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 6813a304397f27d38dbaa7e3e69e03e3d1bae2faf105e9840097eb070b317e4d
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+42     else:
+
+43         return mark_safe(not_specified_icon('Business Criticality Not Specified'))
+
+44 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 80c74f8bc0eaceb546f4a4f30c5ac3aecd26643372c9ce10ad508495700aac48
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+48     if value == Application.WEB_PLATFORM:
+
+49         return mark_safe(icon('list-alt', 'Web'))
+
+50     elif value == Application.DESKTOP_PLATFORM:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 8374a7840e68f76928974b0b675f111715a2cd2ac844d39f79773cf75c8f0073
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+50     elif value == Application.DESKTOP_PLATFORM:
+
+51         return mark_safe(icon('desktop', 'Desktop'))
+
+52     elif value == Application.MOBILE_PLATFORM:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 4060f776d4f7cc20e1f3e92d8e6d363ab33258e4b9b69a8a04a2d5113cae42c3
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+52     elif value == Application.MOBILE_PLATFORM:
+
+53         return mark_safe(icon('mobile', 'Mobile'))
+
+54     elif value == Application.WEB_SERVICE_PLATFORM:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 506eebbda20b98f1c65a3b4a87957036549babb3a60830810214f8dfba78e5e3
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+54     elif value == Application.WEB_SERVICE_PLATFORM:
+
+55         return mark_safe(icon('plug', 'Web Service'))
+
+56     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 62319dfdb455afbb655cc1dd9876ec1caf364e3aa2e3dc673a71fa5e073f46c0
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+56     else:
+
+57         return mark_safe(not_specified_icon('Platform Not Specified'))
+
+58 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: dac166b9801eadfb61c01c0335d280652573560b2ce6031c20ec30bf09f0c6c6
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+62     if value == Application.IDEA_LIFECYCLE:
+
+63         return mark_safe(icon('lightbulb-o', 'Idea'))
+
+64     if value == Application.EXPLORE_LIFECYCLE:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: aa7073c9ea8ce60a0004020f8220614426bf7fbd87b844db74aff588bafcb3f6
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+64     if value == Application.EXPLORE_LIFECYCLE:
+
+65         return mark_safe(icon('compass', 'Explore'))
+
+66     if value == Application.VALIDATE_LIFECYCLE:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: ff66889aaf5d3dea31a1e12030feb49b45ae4106e07c799ec4086467a432ddd0
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+66     if value == Application.VALIDATE_LIFECYCLE:
+
+67         return mark_safe(icon('search', 'Validate'))
+
+68     if value == Application.GROW_LIFECYCLE:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 57072af86930b773a200f926ddee81fe36ddd12e70533683bebc690f98539339
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+68     if value == Application.GROW_LIFECYCLE:
+
+69         return mark_safe(icon('leaf', 'Grow'))
+
+70     if value == Application.SUSTAIN_LIFECYCLE:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: c86bc19c394886cf2c92a5e5630ad2d20c5edbb62a77ac023f695d0d21589881
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+70     if value == Application.SUSTAIN_LIFECYCLE:
+
+71         return mark_safe(icon('ship', 'Sustain'))
+
+72     if value == Application.RETIRE_LIFECYCLE:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: bdf782a036bde86e2b60c74bd2c4fdfb3ac08f5d30157433bb095f579db3a592
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+72     if value == Application.RETIRE_LIFECYCLE:
+
+73         return mark_safe(icon('moon-o', 'Retire'))
+
+74     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: dff54932ef42b773cc1c6249fc382029116836e91fc7437ee86181f05b2d57ad
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+74     else:
+
+75         return mark_safe(not_specified_icon('Lifecycle Not Specified'))
+
+76 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: b4381281d21b4073ccab21cea592bb7cf2bdee0351b8d2e6063932d399c47d84
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+80     if value == Application.THIRD_PARTY_LIBRARY_ORIGIN:
+
+81         return mark_safe(icon('book', 'Third-Party Library'))
+
+82     if value == Application.PURCHASED_ORIGIN:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 67601a6ec3f25ddaf39843f59ed9e01dd7401dc873e9da93848b2ff662360e7b
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+82     if value == Application.PURCHASED_ORIGIN:
+
+83         return mark_safe(icon('money', 'Purchased'))
+
+84     if value == Application.CONTRACTOR_ORIGIN:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: ffc74085dcf7cd87c3ac07d7935cbdc3145fde0a35ac08ff8b533aed490eb43b
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+84     if value == Application.CONTRACTOR_ORIGIN:
+
+85         return mark_safe(icon('suitcase', 'Contractor Developed'))
+
+86     if value == Application.INTERNALLY_DEVELOPED_ORIGIN:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 73362d6632aa4cafc1f2ba01bb506cd101b15e403ab00e564e783b9aeb5e4b91
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+86     if value == Application.INTERNALLY_DEVELOPED_ORIGIN:
+
+87         return mark_safe(icon('home', 'Internally Developed'))
+
+88     if value == Application.OPEN_SOURCE_ORIGIN:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: e733913c01d0cc95e1528b2a5240c274d3d33ab125a45323fc926f038d885af5
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+88     if value == Application.OPEN_SOURCE_ORIGIN:
+
+89         return mark_safe(icon('code', 'Open Source'))
+
+90     if value == Application.OUTSOURCED_ORIGIN:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 0bf56af933535d70e631c970de278add28a39e43c4657da63dbebbb9ea669150
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+90     if value == Application.OUTSOURCED_ORIGIN:
+
+91         return mark_safe(icon('globe', 'Outsourced'))
+
+92     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 9c066b59e0832ea3390dc880204ab357142d0fb1d1ea4a1c03205dc93041eb0a
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+92     else:
+
+93         return mark_safe(not_specified_icon('Origin Not Specified'))
+
+94 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 8b9d92eaa440926d9ff70cb5afd901df289a01db9ec3e81a3c8eb51ff72b6656
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+98     if value:
+
+99         return mark_safe(icon('users', 'External Audience'))
+
+100     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 13c63f745912a275ea0a13e0d3eac84f84fbe9b75078e716a78155aabe7fa1d3
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/icon_filters.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+106     if value:
+
+107         return mark_safe(icon('cloud', 'Internet Accessible'))
+
+108     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: bc94e95ff4422f6b83f63e231459e433b1f8919dea19898067d5af48a691eaa4
+
+Issue Severity: MEDIUM 	 Confidence Level: HIGH
+
+Location: ./project/boh/templatetags/markdown_render.py
+
+Issue: Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.
+
+
+Code: 
+
+20 def markdown_render(value):
+
+21     return mark_safe(markdown.markdown(value, extensions=[EscapeHtml(), 'markdown.extensions.codehilite', 'markdown.extensions.toc']))
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 7a50c411eb9b3d71e018c024af7f4f25fe82baf9cb660ea202ab1a1a9dd419aa
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+199 
+
+200     messages.error(request, _('There was a problem downloading the report.'), extra_tags=random.choice(error_messages))
+
+201     return redirect('boh:dashboard.reports')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: de0d881b78d3578e9444003adf0cf36120feaced25d459e4823965da79ca973f
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+239             tag = add_form.save()
+
+240             messages.success(request, _('You successfully added the "%(tag_name)s" application tag.') % {'tag_name': tag.name}, extra_tags=random.choice(success_messages))
+
+241             return redirect('boh:management.tags')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: eba0d53235f5e221d11c2a3ff7ba62eb5841e850ac9c1c265e9f41c7094e3d8b
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+242         else:
+
+243             messages.error(request, _('There was a problem creating this application tag.'), extra_tags=random.choice(error_messages))
+
+244 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 3f61240a4fd0731c600b7505702e4ccfa3dd7b52f2f4db295f0a427497af393a
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+262             tag = edit_form.save()
+
+263             messages.success(request, _('You successfully updated the "%(tag_name)s" application tag.') % {'tag_name': tag.name}, extra_tags=random.choice(success_messages))
+
+264             return redirect('boh:management.tags')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: d3afc2a864c4049db2749daf7589f8cacf09a1ceb903cd7b6652332e3c79d5ba
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+265         else:
+
+266             messages.error(request, _('There was a problem updating this application tag.'), extra_tags=random.choice(error_messages))
+
+267 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 1a69bf2090f0090112f183fbe943a57526421dc9454fd6ee10de684ce88a7c44
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+285         tag.delete()
+
+286         messages.success(request, _('You successfully deleted the "%(tag_name)s" application tag.') % {'tag_name': tag.name}, extra_tags=random.choice(success_messages))
+
+287         return redirect('boh:management.tags')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: a902ae3076dd43c4898a0172eb2f150480f24e947226b9c1e553df84f59f0574
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+288     else:
+
+289         messages.error(request, _('There was a problem deleting this application tag.'), extra_tags=random.choice(error_messages))
+
+290         return redirect('boh:management.tags.edit', tag.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 62a79fa5939e6412789ae59e4bbd654afe59ff3d80ae3d9e0ae5703ed944bc43
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+314             activity_type = activity_type_form.save()
+
+315             messages.success(request, _('You successfully created the "%(activity_type_name)s" activity type.') % {'activity_type_name': activity_type.name}, extra_tags=random.choice(success_messages))
+
+316             return redirect('boh:management.activity_types')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 93918bd40b75f452c2bea3946d58f6f04374c9b3bf88f207b6657148eda18232
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+317         else:
+
+318             messages.error(request, _('There was a problem creating this activity type.'), extra_tags=random.choice(error_messages))
+
+319 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 5787c9d674ae73bda9001f2291129641313b185ad76d2abb3f1eee2d07000cc7
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+350             activity_type = activity_type_form.save()
+
+351             messages.success(request, _('You successfully updated the "%(activity_type_name)s" activity type.') % {'activity_type_name': activity_type.name}, extra_tags=random.choice(success_messages))
+
+352             return redirect('boh:management.activity_types')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 5dc4d1c856cc9efb95826f209cb66091eff8d53b50f4f5755ff9bcee8ee0128a
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+353         else:
+
+354             messages.error(request, _('There was a problem updating this activity type.'), extra_tags=random.choice(error_messages))
+
+355 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 003290c766ea1a911e3d95c0815db3747316eeb244ba29dc94d61ecfef7b07ad
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+373         activity_type.delete()
+
+374         messages.success(request, _('You successfully deleted the "%(activity_type_name)s" activity type.') % {'activity_type_name': activity_type.name}, extra_tags=random.choice(success_messages))
+
+375         return redirect('boh:management.activity_types')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: c1ba13b5bd4233c40680dd4c9214033a9b8899eb2255a84b8ce3a056e042cd0a
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+376     else:
+
+377         messages.error(request, _('There was a problem deleting this activity type.'), extra_tags=random.choice(error_messages))
+
+378         return redirect('boh:management.activity_types.edit', activity_type.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 348655ac90cf99f47dd300f70fccc6d24b6652638f2fda08a2b8d8650edc7565
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+402             threadfix = threadfix_form.save()
+
+403             messages.success(request, _('You successfully created the "%(threadfix_name)s" ThreadFix service.') % {'threadfix_name': threadfix.name}, extra_tags=random.choice(success_messages))
+
+404             return redirect('boh:management.services')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: d1bca33661d8713397ae0cc3d0abdf78a1936231b5fe7975e1da18b9cb0a85f3
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+405         else:
+
+406             messages.error(request, _('There was a problem creating this ThreadFix service.'), extra_tags=random.choice(error_messages))
+
+407 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: c22ac50b1a7ca0ab376ae498f5a35a100792730da3d2ba12d34ee91774610296
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+425             threadfix = threadfix_form.save()
+
+426             messages.success(request, _('You successfully updated the "%(threadfix_name)s" ThreadFix service.') % {'threadfix_name': threadfix.name}, extra_tags=random.choice(success_messages))
+
+427             return redirect('boh:management.services')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: f20884c1511d2740792f10c3915490f6a183d8fa93b2ebf6f1cd1314bcf97987
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+428         else:
+
+429             messages.error(request, _('There was a problem updating this ThreadFix service.'), extra_tags=random.choice(error_messages))
+
+430 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: ba30b3e7cfc615a870f73640a2665e005769a2cf337e252b50725e83b7ffb493
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+448     if response.success:
+
+449         messages.success(request, _('Everything appears to be working correctly for the "%(threadfix_name)s" ThreadFix service.') % {'threadfix_name': threadfix.name}, extra_tags=random.choice(success_messages))
+
+450     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 87b2a9dff42316c1cd2200df5386d40f399bf1df789058b9261496356089735b
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+450     else:
+
+451         messages.error(request, _('An error occurred when testing "%(threadfix_name)s". Error message: %(error)s') % {'threadfix_name': threadfix.name, 'error': response.message}, extra_tags=random.choice(error_messages))
+
+452 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 26635a960915f84b852dc2750f2f89ac1025ce277e1163a9341c7b848f2e3fb5
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+486         else:
+
+487             messages.error(request, _('An error occurred when importing from "%(threadfix_name)s". Error message: %(error)s') % {'threadfix_name': threadfix.name, 'error': teams_response.message}, extra_tags=random.choice(error_messages))
+
+488             return redirect('boh:management.services')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: bd74ae7f754e5bf048fc4fac90698a355246981e8d606a853f0659cfea572562
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+512             else:
+
+513                 messages.warning(request, _('No applications were imported from "%(threadfix_name)s".') % {'threadfix_name': threadfix.name}, extra_tags=random.choice(error_messages))
+
+514         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 1c29a1dbfec7c7de56e2adc8fa7c785beb46e583c0233aafc92cccc0bdfbe209
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+514         else:
+
+515             messages.error(request, _('An error occurred when saving the import from "%(threadfix_name)s".') % {'threadfix_name': threadfix.name}, extra_tags=random.choice(error_messages))
+
+516 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: b907ec0ba28b0278576f3e44d1e707d50e917d24219ace64490d4d44ffd60d31
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+529         threadfix.delete()
+
+530         messages.success(request, _('You successfully deleted the "%(threadfix_name)s" ThreadFix service.') % {'threadfix_name': threadfix.name}, extra_tags=random.choice(success_messages))
+
+531         return redirect('boh:management.services')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 84abc91700a8b12be6efe6d83a5c47ee2961372b6912e89cf77d19e4f0940e8b
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+532     else:
+
+533         messages.error(request, _('There was a problem deleting this ThreadFix service.'), extra_tags=random.choice(error_messages))
+
+534         return redirect('boh:management.services.threadfix.edit', threadfix.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 333ae4bb07091de5ff6420da4fdffe5635d46ea707a1e0e13f544fb04fe43581
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+558             profile_form.save()
+
+559             messages.success(request, _('You successfully updated your profile.'), extra_tags=random.choice(success_messages))
+
+560         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 9bddd75add2f95578d3792e1f4831306f14327b25c9957d77c19a9a01ce76f26
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+560         else:
+
+561             messages.error(request, _('There was a problem updating your profile.'), extra_tags=random.choice(error_messages))
+
+562 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 3bfe2b0fa507d0e6ede6ba2197be97b65c1e0de1466f1e7de209f36cbd4b3a96
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+578             update_session_auth_hash(request, password_form.user)
+
+579             messages.success(request, _('You successfully changed your password.'), extra_tags=random.choice(success_messages))
+
+580         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: f72b5150492cc8121704e14064a99c433888da760e1bc9e5f1bb7da53c8a4105
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+580         else:
+
+581             messages.error(request, _('There was a problem changing your password.'), extra_tags=random.choice(error_messages))
+
+582 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 7412bfdd215c43679e3c27b291395b484d048d646fb19f214777be8c869c5f6f
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+638             form.save()
+
+639             messages.success(request, _('You successfully updated this organization\'s general information.'), extra_tags=random.choice(success_messages))
+
+640         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 89b9ed314f9441f2021e52fdf8d226621b042f6795977240437aaa6414c39b76
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+640         else:
+
+641             messages.error(request, _('There was a problem updating this organization\'s general information.'), extra_tags=random.choice(error_messages))
+
+642 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: acaf9b3d574c4713cbfb8d876fd0418ef44674e38fd5ea2c285e4909837c86fb
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+661             people_form.save()
+
+662             messages.success(request, _('You successfully updated this organization\'s associated people.'), extra_tags=random.choice(success_messages))
+
+663         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: a61a981edc355299cbf4d287b65fdbf840f4f322b0889699efc38d2ac4d93f33
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+663         else:
+
+664             messages.error(request, _('There was a problem updating this organization\'s associated people.'), extra_tags=random.choice(error_messages))
+
+665 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: b83646d2675d4f89dbc6b9afa708a6664a393d5df84ede24ad437578a859be6b
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+683         organization.delete()
+
+684         messages.success(request, _('You successfully deleted the "%(organization_name)s" organization.') % {'organization_name': organization.name}, extra_tags=random.choice(success_messages))
+
+685         return redirect('boh:dashboard.personal')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 70b1163b1e00c29614143f5cdb69bdb3ef5666c44c41219c7ca7d318c73a5f53
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+702         organization = form.save()
+
+703         messages.success(request, _('You successfully created this organization.'), extra_tags=random.choice(success_messages))
+
+704         return redirect('boh:organization.overview', organization.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 71e32ca92953a7b10446b743df0cd0494dc2022a2ce39521c317ad9d8cb9370d
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+842             except IntegrityError:
+
+843                 messages.error(request, _('"%(name)s" is already related to this application.') % {'name': name}, extra_tags=random.choice(error_messages))
+
+844             else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 53d26cfb33996ce802d7cd3eff3f307e953ae2f3f469af37c09407a25331e9eb
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+844             else:
+
+845                 messages.success(request, _('You successfully added "%(name)s" to this application.') % {'name': name}, extra_tags=random.choice(success_messages))
+
+846             finally:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 5bf105d66018a30bb85a0d4232db73235253d1fdec36ff7f4b68b8a9fd31dcbc
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+848         else:
+
+849             messages.error(request, _('There was a problem saving the relation to this application.'), extra_tags=random.choice(error_messages))
+
+850 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 6908c887e9b9a7d1f62b8eaa01674c8b41f454609ce86f1ef545435b1d6048c4
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+876             except IntegrityError:
+
+877                 messages.error(request, _('"%(name)s" is already related to this application.') % {'name': name}, extra_tags=random.choice(error_messages))
+
+878             else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: da2054cc812a37c5b078885fa4696e4fb1d136dba0b086a49ff56c247b301ddb
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+878             else:
+
+879                 messages.success(request, _('You successfully added "%(name)s" to this application.') % {'name': name}, extra_tags=random.choice(success_messages))
+
+880             finally:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 54e5a84e88a500ac2cd4de89bd1545267f69a902de2f445f76cb5fb67593761f
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+882         else:
+
+883             messages.error(request, _('There was a problem saving the relation to this application.'), extra_tags=random.choice(error_messages))
+
+884 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: f3e5392c25f922acb24c21147dfc0002c53de45e641c9dd5ecb465382254b447
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+904         relation.delete()
+
+905         messages.success(request, _('You successfully disassociated "%(name)s" with this application.') % {'name': name}, extra_tags=random.choice(success_messages))
+
+906     else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 2f79049a8100cf53923eaa8919be4c516c327e661e4f97deb57225c1fc15730b
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+906     else:
+
+907         messages.error(request, _('There was a problem disassociating "%(name)s" with this application.') % {'name': name}, extra_tags=random.choice(error_messages))
+
+908 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 805453c15752ac6a5f285e2d1c1e861b6c9d5afa76f804260111e24ff793ff21
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+918         application = form.save()
+
+919         messages.success(request, _('You successfully created this application.'), extra_tags=random.choice(success_messages))
+
+920         return redirect('boh:application.overview', application_id=application.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 1604062d58578b51095c900dcbcff76d53b7d84d0a688977a0780686d3b32071
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+940                 general_form.save()
+
+941                 messages.success(request, _('You successfully updated this application\'s general information.'), extra_tags=random.choice(success_messages))
+
+942         elif 'submit-organization' in request.POST:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: cd6a72962a49548873ca383b6f04b5259a6c6aa5c6ce5c4cc1fc9bed0bbf04ba
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+945                 organization_form.save()
+
+946                 messages.success(request, _('You successfully updated this application\'s organization.'), extra_tags=random.choice(success_messages))
+
+947 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 571b2c6898bfbbb12e5219ae42aaf74f211da1e7ea08f59d6c21df55b73cba07
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+971             metadata_form.save()
+
+972             messages.success(request, _('You successfully updated this application\'s metadata.'), extra_tags=random.choice(success_messages))
+
+973         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 91615209f0c881434e6c58f598f4c13f6e61f244136403d18b3a5c80ba8a1ef9
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+973         else:
+
+974             messages.error(request, _('There was a problem updating this application\'s metadata.'), extra_tags=random.choice(error_messages))
+
+975     if 'submit-technologies' in request.POST:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 27e7fa8d7a21dd5a13791cfdd89f761dcb8b26f30eaebe9934f69394f59167e1
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+978             technologies_form.save()
+
+979             messages.success(request, _('You successfully updated this application\'s technologies.'), extra_tags=random.choice(success_messages))
+
+980         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: be870b167abde4e05416bdef46fa26c941951217b2af2020c14c34a8e100970f
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+980         else:
+
+981             messages.error(request, _('There was a problem updating this application\'s technologies.'), extra_tags=random.choice(error_messages))
+
+982     if 'submit-regulations' in request.POST:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 8732734c6732c27b58d2e9da5210d5f2f43303a1c15b1bd49379378ae66b8ff2
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+985             regulations_form.save()
+
+986             messages.success(request, _('You successfully updated this application\'s regulations.'), extra_tags=random.choice(success_messages))
+
+987         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 139bcb6914411d1badbfade7d10a8131a15a693bded2ce44c35d3662816b5084
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+987         else:
+
+988             messages.error(request, _('There was a problem updating this application\'s regulations.'), extra_tags=random.choice(error_messages))
+
+989     elif 'submit-tags' in request.POST:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: a907d18be80f860c60aa2fcde84d13b1de7a53ab73b9f0fd41ebaaddb6e83edd
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+992             tags_form.save()
+
+993             messages.success(request, _('You successfully updated this application\'s tags.'), extra_tags=random.choice(success_messages))
+
+994         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: b1f689fb6da2ec501b2ee6534393aa2748ef8ecf9a4d48b35a18cace437a64e5
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+994         else:
+
+995             messages.error(request, _('There was a problem updating this application\'s tags.'), extra_tags=random.choice(error_messages))
+
+996 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: f3e520342008eb7809fb4b1ae64f61352d4e78b99d66786880a4c44a566e0d87
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1019             data_elements_form.save()
+
+1020             messages.success(request, _('You successfully updated this application\'s data elements.'), extra_tags=random.choice(success_messages))
+
+1021         return redirect('boh:application.settings.data-elements', application.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: aa220e2b41001059c7c85d9f68c132075f9680dc47c649308552d0a01886ca62
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1044             sla_form.save()
+
+1045             messages.success(request, _('You successfully updated this application\'s service level agreements.'), extra_tags=random.choice(success_messages))
+
+1046         else:
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 4c075e0135b6336a23e91c55dd2c3362a80b3072b9040590c427758a7543380c
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1046         else:
+
+1047             messages.error(request, _('There was a problem updating this application\'s service level agreements.'), extra_tags=random.choice(error_messages))
+
+1048 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: d64ca9511bd570e9e40bab84ff68124f12575c8aa72b309576b807f4fdc1667a
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1066         dcl_override_form.save()
+
+1067         messages.success(request, _('This application\'s data classification override has been updated.'), extra_tags=random.choice(success_messages))
+
+1068 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 645549f006e1a4e2d3fbe549b51a8c8449f7a238f8ab7ca4eab0f036147bc3c9
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1082             threadfix_form.save()
+
+1083             messages.success(request, _('You successfully updated this application\'s ThreadFix information.'), extra_tags=random.choice(success_messages))
+
+1084 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: bd5a04189fe009c95c51ed698f735f963e98b23f51b72adf510ca26f122c8d11
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1103             asvs_form.save()
+
+1104             messages.success(request, _('You successfully updated this application\'s ASVS information.'), extra_tags=random.choice(success_messages))
+
+1105 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 68d37c5edc040fe8693d2bff5e9ed6acd003833587b6cdf0f6c5c757371bb76b
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1132         formset.save()
+
+1133         messages.success(request, _('You successfully updated these custom fields.'), extra_tags=random.choice(success_messages))
+
+1134         return redirect('boh:application.settings.custom-fields', application_id=application.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: fe6cbcb9d448d0092581ddafd27cc0563f5d611b9d17ee5b7a2eaeb577b7e276
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1156         application.delete()
+
+1157         messages.success(request, _('You successfully deleted the "%(application_name)s" application.') % {'application_name': application.name}, extra_tags=random.choice(success_messages))
+
+1158         return redirect('boh:application.list')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: f2c7004f3b43ea36e188f642a073152af2490dd41930eb71a32b8bf1b978ada2
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1181         environment.save()
+
+1182         messages.success(request, _('You successfully created this environment.'), extra_tags=random.choice(success_messages))
+
+1183         return redirect('boh:application.environments', application_id=application.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 1acf8691b2ffa634cbcbcc2853fcf2a81eb4089663d2f64e400444c494042422
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1201         environment = form.save()
+
+1202         messages.success(request, _('You successfully updated this environment.'), extra_tags=random.choice(success_messages))
+
+1203         return redirect('boh:environment.edit.general', environment_id=environment.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: e2ba985ef96a9479877604bb2078e956d1a99d027206a648cb6cc2e678d5f75c
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1234         formset.save()
+
+1235         messages.success(request, _('You successfully updated these locations.'), extra_tags=random.choice(success_messages))
+
+1236         return redirect('boh:environment.edit.locations', environment_id=environment.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: a85c9018199584f8d91742a5b07542ff93f8ec7305e580ff7f4fcbafdbc9e267
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1267         formset.save()
+
+1268         messages.success(request, _('You successfully updated these credentials.'), extra_tags=random.choice(success_messages))
+
+1269         return redirect('boh:environment.edit.credentials', environment_id=environment.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: c86f02b65a051da80384bb24b8497877d8ad90a662d6ed00f70ca4f8b24a7956
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1290         env_type = environment.get_environment_type_display()
+
+1291         messages.success(request, _('You successfully deleted the "%(env_type)s" environment.') % {'env_type': env_type}, extra_tags=random.choice(success_messages))
+
+1292         return redirect('boh:application.environments', environment.application.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: e94826b9cc5ed89dd3c79e53a314c841abb6dd07bfc937e8ff1d0931fc3e906d
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1342         engagement.save()
+
+1343         messages.success(request, _('You successfully created this engagement.'), extra_tags=random.choice(success_messages))
+
+1344         return redirect('boh:engagement.detail', engagement_id=engagement.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 01345068cf14613febc4d2eacd3a3a04033d20685e0e39e6ac192c35299a2b53
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1362         engagement = form.save()
+
+1363         messages.success(request, _('You successfully updated this engagement.'), extra_tags=random.choice(success_messages))
+
+1364         return redirect('boh:engagement.detail', engagement_id=engagement.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: a16f687b667689952f4238f8a6eb1e37b233c8ef0d3b03f7674fa80608a4e224
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1384         eng_status = engagement.get_status_display().lower()
+
+1385         messages.success(request, _('You successfully updated this engagement\'s status to "%(eng_status)s".') % {'eng_status': eng_status}, extra_tags=random.choice(success_messages))
+
+1386 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: f498c5f1813bf32615d25b7e5da7d72893723624ad13eca2cb8ed50be8f396a4
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1416         comment.save()
+
+1417         messages.success(request, _('You successfully added a comment to this engagement.'), extra_tags=random.choice(success_messages))
+
+1418         return redirect(reverse('boh:engagement.detail', kwargs={'engagement_id': engagement.id}) + '#comment-' + str(comment.id))
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 3045eaced58e879d3d7dc734427a3d01afae21e534ec83f5309c9d9b3103d602
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1455         form.save_m2m()  # https://docs.djangoproject.com/en/1.7/topics/forms/modelforms/#the-save-method
+
+1456         messages.success(request, _('You successfully added this activity.'), extra_tags=random.choice(success_messages))
+
+1457         return redirect('boh:activity.detail', activity_id=activity.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 2ba62ad821708a6bc1c7ec4ce8628b47641d1d3480dea3bb3772735c5721d685
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1476         activity = form.save()
+
+1477         messages.success(request, _('You successfully updated this activity.'), extra_tags=random.choice(success_messages))
+
+1478         return redirect('boh:activity.detail', activity_id=activity.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 7d4adb869486365b4727704294d9213e35eb26227e9a0933a17407e5a0806338
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1498         activity_status = activity.get_status_display().lower()
+
+1499         messages.success(request, _('You successfully updated this activity\'s status to "%(activity_status)s".') % {'activity_status': activity_status}, extra_tags=random.choice(success_messages))
+
+1500 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 5edb64640588b31d40d0fbff239d1494a1fc40c8addeea2c19fcf6c4f5045f5a
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1512         activity.delete()
+
+1513         messages.success(request, _('You successfully deleted the activity.'), extra_tags=random.choice(success_messages))
+
+1514         return redirect('boh:engagement.detail', activity.engagement.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: ce36466cb911ab87921da3e0e96341327a11c5fae081b0b614b8fc88ac699a9e
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1530         comment.save()
+
+1531         messages.success(request, _('You successfully added a comment to this activity.'), extra_tags=random.choice(success_messages))
+
+1532         return redirect(reverse('boh:activity.detail', kwargs={'activity_id': activity.id}) + '#comment-' + str(comment.id))
+
+
+--------------------------------------------------
+
+Issue Fingerprint: d67b68cc165a615bd80bcad2534572d36b8354df8c20789c7fd205c96767df83
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1564         form.save()
+
+1565         messages.success(request, _('You successfully created this person.'), extra_tags=random.choice(success_messages))
+
+1566         return redirect('boh:person.list')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: fa21d49e304d489095a76977fc0de9a770571b0f9af00a24ff9567ac45593aca
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1595             person = form.save()
+
+1596             messages.success(request, _('You successfully updated "%(name)s".') % {'name': name}, extra_tags=random.choice(success_messages))
+
+1597             return redirect('boh:person.detail', person.id)
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 925dcea76125f32e451b1db6904e1f1c465c749f445d9cae5ed3819ef998c6f5
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1598         else:
+
+1599             messages.error(request, _('There was a problem updating "%(name)s".') % {'name': name}, extra_tags=random.choice(error_messages))
+
+1600 
+
+
+--------------------------------------------------
+
+Issue Fingerprint: ee56faeb83b562e0b45ce899c9cf7198bca5d7039309ae7a92e0550803ff0fc5
+
+Issue Severity: LOW 	 Confidence Level: HIGH
+
+Location: ./project/boh/views.py
+
+Issue: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+
+Code: 
+
+1617         person.delete()
+
+1618         messages.success(request, _('You successfully deleted "%(name)s".') % {'name': name}, extra_tags=random.choice(success_messages))
+
+1619         return redirect('boh:person.list')
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 475b61efcffdca035271070443ebf8de6c7200c9b93b37b54d52fb89eb59491d
+
+Issue Severity: LOW 	 Confidence Level: MEDIUM
+
+Location: ./project/boh/test_models.py
+
+Issue: Possible hardcoded password: 'pass123'
+
+
+Code: 
+
+245 
+
+246         self.ec_1 = models.EnvironmentCredentials(username='user', password='pass123', environment=self.env_1)
+
+247         self.ec_1.save()
+
+
+--------------------------------------------------
+
+Issue Fingerprint: 7e048133da24040f9ded6db95a73cb0c210643176f5f93ea39e5c9b772a42a41
+
+Issue Severity: LOW 	 Confidence Level: MEDIUM
+
+Location: ./project/boh/test_models.py
+
+Issue: Possible hardcoded password: 'secret'
+
