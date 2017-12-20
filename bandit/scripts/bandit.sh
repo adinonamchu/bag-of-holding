@@ -1,5 +1,5 @@
 #!/bin/bash
-
+chmod +x /bandit/scripts/bandit.sh
 set -v 
 
 echo 'Installing bandit'
