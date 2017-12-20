@@ -4,11 +4,11 @@ python:
 cache: pip
 install:
   - pip install -r requirements.txt
-addons:
-  srcclr: true
 env:
   - TASK="script/sourceclear"
   - TASK="bandit/scripts/bandit.sh"
+addons:
+  srcclr: true
 before_script:
   - npm install -g bower
   - bower install
